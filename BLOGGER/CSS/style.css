@@ -1,0 +1,365 @@
+
+@import url('../CSS/Fonts.css');
+
+
+html,body{
+    margin:0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    
+    /* Theme colors */
+    --text-gray: gray;
+    --text-light: #0B4F6C;
+    --bg-color: #01BAEF;
+    --white: #FBFBFF;
+
+    /* gradient color */
+    --sky: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+
+    /* theme font-family */
+    --Abel:'Abel', cursive;
+    --Inconsolota: 'Inconsolota', cursive;
+    --Original_Surfer: 'Original_Surfer', cursive;
+    --Oxygen: 'Oxygen', cursive;
+}
+
+
+
+/*---------------Global Classes------------*/
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: rgb(12, 12, 12);
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Oxygen);
+    font-size: 2.5rem;
+}
+
+
+h3{
+    font-family: var(--Oxygen);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Oxygen);
+    cursor: pointer;
+}
+
+.text-grey{
+    color:var(--text-gray);
+}
+
+p{
+    font-family: var(--Original_Surfer);
+    color: var(black);
+}
+
+/*-------x-------Global Classes------x-----*/
+
+/*---------------navbar---------------*/
+
+.nav{
+    background-color: white;
+    padding: 0 .2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav.toggle-collapse{
+    position: absolute;
+    top: 0;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav.toggle-collapse.toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav.toggle-collapse.toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+    height: 30rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: gray;
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family:var(--Oxygen);
+    font-size: 1.6rem;
+}
+.nav .social{
+    padding: 1.4rem;
+}
+
+.nav .social i{
+    padding: .2rem;
+}
+
+.nav .social i:hover{
+    color: #041130
+}
+
+/*------x--------navbar--------x------*/
+
+/*---------------Site Content---------------*/
+
+main .site-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+main .post-content .post-title a{
+    font-size: 1.5rem;
+    color: black;
+}
+
+main .post-image > div {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+main .post-image > div{
+    transform: scale(1);
+    transition:  0.3s ease-in-out;
+}
+
+main .post-image:hover img:hover{
+    transform: scale(1.3);
+}
+
+/*---------x-----Site Content------x--------*/
+
+/*----------Sidebar----------*/
+
+.site-content .sidebar .popular-post-content{
+    padding: 1rem 0;
+}
+
+.site-content .sidebar .popular-post h2{
+    padding-top: 8rem;
+}
+
+.site-content .sidebar .popular .post-info{
+    padding: .4rem .1rem !important;
+    bottom: 0rem !important;
+    left: 1rem !important;
+    border-radius: 0rem !important;
+    background: white !important;
+}
+
+.site-content .sidebar .popular-post .post-title a{
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter{
+    padding: 3rem;
+}
+
+.site-content .sidebar .newsletter .form-element{
+    padding: .5rem 2rem;
+}
+
+.site-content .sidebar .newsletter .input-element{
+    width: 80%;
+    height: 1.9rem;
+    padding: .3rem .5rem;
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter .form-btn{
+    border-radius: 0;
+    padding: .8rem 32%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+
+/*-----x----Sidebar-----x----*/
+
+/*----------------Main Content-----------*/
+
+/*----------------Site title-------------*/
+main .site-title{
+   background: url('../assets/vatican-flag-922x614-922x563.jpg');
+   background-size: cover;
+   height: 110vh;
+   display: flex;
+   justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+main .site-title .h1, h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);
+    justify-content: center;
+
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+/*--------x-------Site title-----x-------*/
+
+
+/*---------x------Main Content-----x-----*/
+
+/*----------------Footer-----------------*/
+
+footer.footer{
+    height: 100%;
+    background: rgb(82, 72, 72);
+    position: relative;
+}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: var(--white);
+}
+
+footer.footer .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .input-element{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--Abel);
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element span{
+    background: var(--bg-color);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0.4rem;
+}
+
+footer.footer .rights{
+    justify-content: center;
+}
+
+footer.footer .rights h4 a{
+    color: var(--white);
+}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span{
+    color: var(black);
+}
+
+footer.footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+/*--------x-------Footer---------x-------*/
+
+/*       Viewport less than or equal to 750px      */
+
+@media only screen and (max-width: 750px){
+    .nav .nav-menu, .nav.nav-items{
+        flex-direction: column;
+    }
+
+    .nav.toggle-collapse{
+        display: initial;
+    }
+}
+
+
+/*    x   Viewport less than or equal to 750px   x   */
